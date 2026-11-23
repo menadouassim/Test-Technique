@@ -1,15 +1,11 @@
-
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
+from hackernews.spiders.news import NewsSpider
 
-from hackernews.hackernews.spiders.news import NewsSpider
+def setup_settings():
+    settings = get_project_settings()
 
-
-
-def Setup_Settings():
-    Settings = get_project_settings()
-
-    Settings.set("FEEDS", {
+    settings.set("FEEDS", {
         "news-articles.csv": {
             "format": "csv",
             "overwrite": True,
@@ -17,14 +13,18 @@ def Setup_Settings():
         }
     })
 
-    return Settings
+    return settings
+
 
 def main():
+    settings = setup_settings()
 
-    Settings = Setup_Settings()
-    process = CrawlerProcess(Settings)
+    print("Loaded ITEM_PIPELINES:", settings.get("ITEM_PIPELINES"))
+
+    process = CrawlerProcess(settings)
     process.crawl(NewsSpider)
     process.start()
+
 
 if __name__ == "__main__":
     main()
