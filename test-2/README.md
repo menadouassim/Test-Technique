@@ -23,4 +23,4 @@
 
 ## run the script:
 
-    python main.py
+    cd test-2 && python main.py
