@@ -18,7 +18,7 @@ class HackernewsPipeline:
         link=item.get("source")
         
         if not link :
-            item["link"]="Lien non disponible"
+            item["source"]="Lien non disponible"
         else:
             link = link.strip()
             parsed_url = urlparse(link)
