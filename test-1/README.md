@@ -17,5 +17,5 @@
     pip install -r requirements.txt
 
 ## run the scraper: 
-    python hackernews/scraper.py
+    cd test-1/hackernews && python scraper.py
 
