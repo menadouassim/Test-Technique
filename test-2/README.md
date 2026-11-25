@@ -19,8 +19,9 @@
 
 ## set-up the API_KEY:
 
-    create the .env and copy the .env.example in it and put in your API_KEY
+    create the .env and copy the .env.example in it and put in your API-KEY
 
 ## run the script:
 
-    cd test-2 && python main.py
+    cd test-2 
+    python main.py
