@@ -23,7 +23,7 @@ params = {
 
 def call_scale_serp_api(params):
     # make the http GET request to Scale SERP
-    api_result = requests.get('https://api.scaleserp.com/search', params )
+    api_result = requests.get('https://api.scaleserp.com/search', params , timeout=10)
     
     # print the JSON response from Scale SERP
     #print(json.dumps(api_result.json()))
