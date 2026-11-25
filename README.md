@@ -7,15 +7,15 @@
 
 # To-run :
 
-set-up venv
+## set-up venv:
     mac : python3 -m venv env 
 
-activate venv 
+## activate venv:
     mac : source env/bin/activate
 
-install requirements.txt
+## install requirements:
     pip install -r requirements.txt
 
-run the scraper 
+## run the scraper: 
     python hackernews/scraper.py
 
