@@ -24,7 +24,9 @@ class HackernewsPipeline:
             parsed_url = urlparse(link)
 
             if parsed_url.scheme not in ("http", "https"):
-                raise DropItem(f"Invalid URL: {link}")
+                # relative link issue , concatenate with the URL
+                
+                link = "https://news.ycombinator.com/" + link.lstrip("/")
             
             item["source"] = link
 
